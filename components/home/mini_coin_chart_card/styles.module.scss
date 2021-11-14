@@ -1,0 +1,59 @@
+.mini_coin_chart_card {
+  // position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 32px;
+  cursor: pointer;
+  
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0px;
+  //   left: 0px;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(black, 0.0);
+  //   transition: 300ms;
+  // }
+
+  // &:hover::after {
+  //   background-color: rgba(black, 0.1);
+  // }
+
+  .price_change_base {
+    text-align: right;
+  }
+  
+  .price_change_decreased {
+    @extend .price_change_base;
+
+    color: red;
+  }
+
+  .price_change_increased {
+    @extend .price_change_base;
+
+    color: #3dff8b;
+  }
+
+  .coin_chart {
+    margin-top: 16px;
+  }
+
+  .bottom_area {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 32px;
+      width: 32px;
+      border-radius: 3000px;
+      overflow: hidden;
+    }
+
+    .name {
+      margin-left: 16px;
+    }
+  }
+}

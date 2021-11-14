@@ -1,0 +1,29 @@
+$increased_color: #3dff8b;
+$decreased_color: red;
+
+.price_change_indicator {
+  display: flex;
+  align-items: center;
+
+  .value_base {}
+
+  .direction_icon_increased {
+    color: $increased_color;
+  }
+
+  .direction_icon_decreased {
+    color: $decreased_color;
+  }
+
+  .value_increased {
+    @extend .value_base;
+
+    color: $increased_color;
+  }
+
+  .value_decreased {
+    @extend .value_base;
+
+    color: $decreased_color;
+  }
+}

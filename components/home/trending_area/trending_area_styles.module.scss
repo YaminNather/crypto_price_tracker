@@ -1,0 +1,14 @@
+.trending_area {
+  margin-top: 64px;
+  
+  .charts_area {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+
+    @media(max-width: 599px) {
+      grid-template-columns: 1fr;      
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.home_page {
+  position: relative;
+  
+  .page_area {
+    margin-left: 80px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @media(max-width: 599px) {
+      margin-left: 0px;
+    }
+
+    .progress_indicator_container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;          
+    }
+
+    // .header_area {
+    //   display: flex;
+
+    //   .news {
+    //     display: flex;
+    //     height: 160px;
+    //     background-image: linear-gradient(to bottom right, rgb(255, 53, 87) 30%, rgb(255, 71, 157));
+    //     padding-left: 32px;
+    //     padding-right: 32px;
+    //     justify-content: space-between;
+    //     align-items: center;        
+
+    //     .text_area {
+    //       .title {
+    //         font-weight: 900;
+    //       }
+    
+    //       .subtitle {
+    //         margin-top: 16px;
+    //       }
+
+    //       .speaker {            
+    //         font-size: 0.7em;
+    //         font-style: italic;
+    //         opacity: 0.8;
+    //       }
+    //     }
+
+    //     .placeholder_image {
+    //       width: 256px;   
+    //     }
+    //   }
+
+    //   .roi {
+    //     margin-left: 64px;
+    //     display: flex;
+    //     width: 160px;
+    //     height: 160px;
+    //     background-image: linear-gradient(to bottom right, #3A61FF 30%, #25A0FF);
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+
+    //     .heading {
+    //       font-size: 0.8em;
+    //     }
+  
+    //     .amount {
+    //       margin-top: 16px;
+    //     }
+    //   }
+    // }
+
+    .header_area {
+      display: flex;
+      align-items: center;
+
+      .price_change_indicator {
+        margin-left: 8px;
+      }
+    }
+
+    .coin_chart_card {
+      margin-top: 32px;
+    }
+
+    .trending_coins_area {
+      margin-top: 64px;
+      
+      .charts_area {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+      }
+    }
+  }
+}
