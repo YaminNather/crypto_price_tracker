@@ -48,9 +48,9 @@ const SearchArea: React.FC<SearchAreaProps> = (props) => {
 
         <div className={styles.search_results}>
           {searchResults.map(
-            (value) => {
+            (value, index) => {
               return (
-                <Link href={`/coins/${value.id}`}>
+                <Link key={index} href={`/coins/${value.id}`}>
                   <div className={styles.search_result} onClick={() => searchAreaContextData.setIsOpen(false)}>
                     <img src={value.image} />
 

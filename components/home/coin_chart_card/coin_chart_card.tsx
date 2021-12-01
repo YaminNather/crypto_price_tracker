@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import { Coin } from "../../../coingecko_api/coin";
+import { Coin } from "../../../coingecko_api/models/coin";
 import CoinChart from "../../common/coin_chart/coin_chart";
 
 import react from "react";

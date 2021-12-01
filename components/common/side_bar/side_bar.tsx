@@ -29,7 +29,7 @@ const SideBar: React.FC = (props) => {
             {/* <hr /> */}
           </div>
           
-          {coins.map((value) => <CoinButton coin={value} selected={value.id == selectedCoin} />)}  
+          {coins.map((value, index) => <CoinButton key={index} coin={value} selected={value.id == selectedCoin} />)}  
         </div>        
       </div>
     );

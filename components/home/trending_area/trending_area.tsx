@@ -1,6 +1,6 @@
 import react from "react";
 import { TrendingCoins } from "../../../coingecko_api/coingecko_api";
-import { TrendingResultCoinData } from "../../../coingecko_api/trending_result_coin_data";
+import { TrendingResultCoinData } from "../../../coingecko_api/models/trending_result_coin_data";
 import MiniCoinChartCard from "../mini_coin_chart_card/mini_coin_chart_card";
 import styles from './trending_area_styles.module.scss';
 

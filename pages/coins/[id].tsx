@@ -15,6 +15,8 @@ import styles from "../../styles/Home.module.scss";
 import SearchArea from "../../components/home/search_area/search_area";
 import searchAreaContext, { SearchAreaContextData } from "../../components/home/search_area_context/search_area_context";
 
+import Image from "next/image";
+
 const CoinsInfoPage: NextPage = () => {
   const coinInfo: Coin | null = useCoinInfo();
   const [searchAreaOpen, setSearchAreaOpen] = react.useState<boolean>(false);

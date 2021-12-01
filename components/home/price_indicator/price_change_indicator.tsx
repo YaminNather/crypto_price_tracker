@@ -1,5 +1,5 @@
 import react from 'react';
-import { Coin } from '../../../coingecko_api/coin';
+import { Coin } from '../../../coingecko_api/models/coin';
 import styles from './price_change_indicator_styles.module.scss';
 import ArrowDropUp from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDown from '@mui/icons-material/ArrowDropDown';

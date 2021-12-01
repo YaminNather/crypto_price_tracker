@@ -1,6 +1,6 @@
 import react from "react";
 import AliceCarousel from "react-alice-carousel";
-import { Coin } from "../../../coingecko_api/coin";
+import { Coin } from "../../../coingecko_api/models/coin";
 
 const TrendingCoinsCarousel: React.FC = (props) => {
   const [trendingCoins, setTrendingCoins] = react.useState<Coin[] | null>(null);

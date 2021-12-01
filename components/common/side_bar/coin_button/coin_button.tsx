@@ -1,6 +1,6 @@
 import Link from "next/link";
 import react from "react";
-import OnlyMarketData from "../../../../coingecko_api/only_market_data";
+import OnlyMarketData from "../../../../coingecko_api/models/only_market_data";
 
 import styles from "./coin_button_styles.module.scss";
 
