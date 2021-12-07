@@ -42,12 +42,8 @@ const MiniCoinChartCard: react.FC<MiniCoinChartCardProps> = (props) => {
     
     return (
       <Link href={`/coins/${props.id}`}>
-        <div>
-          <p className={(priceIncreased) ? styles.price_change_increased : styles.price_change_decreased}>
-            {coin.market_data.price_change_percentage_24h}%
-          </p>
-
-          <CoinChart 
+        <div>         
+          <CoinChart
             className={styles.coin_chart} 
             id={props.id} 
             color={(priceIncreased) ? "#3dff8b" : "red" } 
@@ -58,9 +54,15 @@ const MiniCoinChartCard: react.FC<MiniCoinChartCardProps> = (props) => {
           />
 
           <div className={styles.bottom_area}>
-            <img src={coin.image.small} />
+            <div className={styles.left_area}>
+              <img src={coin.image.small} />
 
-            <h3 className={styles.name}>{coin.name}</h3>
+              <h3 className={styles.name}>{coin.name}</h3>
+            </div>
+
+            <p className={(priceIncreased) ? styles.price_change_increased : styles.price_change_decreased}>
+            {coin.market_data.price_change_percentage_24h}%
+          </p>
           </div>
         </div>
       </Link>

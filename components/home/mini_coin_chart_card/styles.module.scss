@@ -1,9 +1,15 @@
+@import "../../../styles/breakpoints.scss";
+
 .mini_coin_chart_card {
   // position: relative;
   width: 100%;
   overflow: hidden;
   padding: 32px;
   cursor: pointer;
+
+  @include breakpoint(mobile) {
+    padding: 16px;
+  }
   
   // &::after {
   //   content: "";
@@ -18,42 +24,59 @@
 
   // &:hover::after {
   //   background-color: rgba(black, 0.1);
-  // }
-
-  .price_change_base {
-    text-align: right;
-  }
-  
-  .price_change_decreased {
-    @extend .price_change_base;
-
-    color: red;
-  }
-
-  .price_change_increased {
-    @extend .price_change_base;
-
-    color: #3dff8b;
-  }
+  // }  
 
   .coin_chart {
     margin-top: 16px;
+
+    @include breakpoint(mobile) {
+      display: none !important;
+    }
   }
 
   .bottom_area {
     margin-top: 32px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
-    img {
-      height: 32px;
-      width: 32px;
-      border-radius: 3000px;
-      overflow: hidden;
+    @include breakpoint(mobile) {
+      margin-top: 0px;
+      flex-direction: column;
+      align-items: start;
     }
 
-    .name {
-      margin-left: 16px;
+    .left_area {
+      display: flex;
+
+      img {
+        height: 32px;
+        width: 32px;
+        border-radius: 3000px;
+        overflow: hidden;
+      }
+
+      .name {
+        margin-left: 16px;
+      }      
+    }
+
+    .price_change_base {
+      @include breakpoint(mobile) {
+        margin-top: 16px;
+      }
+    }
+    
+    .price_change_decreased {
+      @extend .price_change_base;
+  
+      color: red;
+    }
+  
+    .price_change_increased {
+      @extend .price_change_base;
+  
+      color: #3dff8b;
     }
   }
 }

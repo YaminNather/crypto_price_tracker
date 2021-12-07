@@ -1,3 +1,5 @@
+@import "../../../styles/global_scss.scss";
+
 .trending_area {
   margin-top: 64px;
   
@@ -7,8 +9,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
 
-    @media(max-width: 599px) {
-      grid-template-columns: 1fr;      
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
   }
 }
