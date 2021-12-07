@@ -31,7 +31,7 @@ const SearchArea: React.FC<SearchAreaProps> = (props) => {
         style={{...props.style, display: (searchAreaContextData.isOpen) ? "flex" : "none"}}
       >      
         <div className={styles.search_input_container}>
-          <Search fontSize="large" />
+          <Search className={styles.search_icon} fontSize="large" />
 
           <input 
             type="text" 
