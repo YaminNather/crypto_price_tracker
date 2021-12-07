@@ -1,41 +1,47 @@
+@import "../../../styles/global_scss.scss";
+
 .search_area {
   position: fixed;
   display: flex;
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   background-color: rgba(black, 0.9);  
-  padding-top: 32px;  
+  padding: 32px;
+  padding-left: 360px;
+  padding-right: 360px;
   flex-direction: column;
-  align-items: center;
-
-  .close_button {
-    position: absolute;
-    top: 32px;
-    left: 32px;
+  
+  @include breakpoint(tablet) {
+    padding: 32px 32px;
   }
 
   .search_input_container {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 
     .search_input {
+      flex-shrink: 1;
+      flex-grow: 1;
       margin-left: 8px;
       height: 64px;
-      width: 512px;
       padding-left: 32px;
       font-size: 24px;
+
+      @include breakpoint(mobile) {
+        height: 32px;
+      }
     }
   }
 
   .search_results {
     margin-top: 16px;
-    display: flex;
-    width: 800px;
+    display: flex;    
     border-radius: 16px;
     background-color: #12121b;
     overflow-y: scroll;
-    padding-top: 32px;
-    padding-bottom: 32px;    
+    // padding-top: 32px;
+    // padding-bottom: 32px;    
     flex-direction: column;
 
     &::-webkit-scrollbar {
@@ -47,7 +53,7 @@
       padding: 16px;
       align-items: center;
       cursor: pointer;
-      transition: 300ms;
+      transition: 300ms;      
 
       &:hover {
         background-color: #1f1f2e;
@@ -61,6 +67,17 @@
       .name {
         margin-left: 16px
       }
+    }
+
+  }
+  
+  .close_button {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+
+    @include breakpoint(tablet) {
+      display: none;
     }
   }
 }

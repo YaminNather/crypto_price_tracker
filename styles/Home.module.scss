@@ -1,3 +1,5 @@
+@import "../styles/global_scss.scss";
+
 .home_page {
   position: relative;
   
@@ -17,63 +19,26 @@
       justify-content: center;
       align-items: center;          
     }
-
-    // .header_area {
-    //   display: flex;
-
-    //   .news {
-    //     display: flex;
-    //     height: 160px;
-    //     background-image: linear-gradient(to bottom right, rgb(255, 53, 87) 30%, rgb(255, 71, 157));
-    //     padding-left: 32px;
-    //     padding-right: 32px;
-    //     justify-content: space-between;
-    //     align-items: center;        
-
-    //     .text_area {
-    //       .title {
-    //         font-weight: 900;
-    //       }
     
-    //       .subtitle {
-    //         margin-top: 16px;
-    //       }
+    .app_bar {
+      display: none;
 
-    //       .speaker {            
-    //         font-size: 0.7em;
-    //         font-style: italic;
-    //         opacity: 0.8;
-    //       }
-    //     }
+      @include breakpoint(tablet) {
+        display: initial;
+      }
 
-    //     .placeholder_image {
-    //       width: 256px;   
-    //     }
-    //   }
-
-    //   .roi {
-    //     margin-left: 64px;
-    //     display: flex;
-    //     width: 160px;
-    //     height: 160px;
-    //     background-image: linear-gradient(to bottom right, #3A61FF 30%, #25A0FF);
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-
-    //     .heading {
-    //       font-size: 0.8em;
-    //     }
-  
-    //     .amount {
-    //       margin-top: 16px;
-    //     }
-    //   }
-    // }
+      .search_button {
+        float: right;
+      }      
+    }
 
     .header_area {
       display: flex;
       align-items: center;
+
+      @include breakpoint(tablet) {
+        margin-top: 32px; 
+      }
 
       .price_change_indicator {
         margin-left: 8px;

@@ -16,6 +16,8 @@ import SearchArea from "../../components/home/search_area/search_area";
 import searchAreaContext, { SearchAreaContextData } from "../../components/home/search_area_context/search_area_context";
 
 import Image from "next/image";
+import MenuOutlined from "@mui/icons-material/MenuOutlined";
+import Search from "@mui/icons-material/Search";
 
 const CoinsInfoPage: NextPage = () => {
   const coinInfo: Coin | null = useCoinInfo();
@@ -26,7 +28,7 @@ const CoinsInfoPage: NextPage = () => {
     return (
       <>
         <Head>
-          <title>Bitcoin</title>
+          <title>Price Tracker</title>
         </Head>
   
         <div className={styles.home_page}>
@@ -54,6 +56,12 @@ const CoinsInfoPage: NextPage = () => {
 
     return (
       <>
+        <div className={styles.app_bar}>
+          <div className={classNames("icon_button", styles.search_button)} onClick={() => setSearchAreaOpen(true)}>
+            <Search />
+          </div>
+        </div>
+
         <div className={styles.header_area}>          
             <img src={coinInfo.image.small} />
             

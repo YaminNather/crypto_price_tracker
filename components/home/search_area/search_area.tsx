@@ -1,6 +1,6 @@
 import Search from "@mui/icons-material/Search";
 import classNames from "classnames";
-import react from "react";
+import react, { useEffect } from "react";
 import { searchCoins } from "../../../coingecko_api/coingecko_api";
 import OnlyMarketData from "../../../coingecko_api/models/only_market_data";
 import searchAreaContext, { SearchAreaContextData } from "../search_area_context/search_area_context";
@@ -18,6 +18,9 @@ const SearchArea: React.FC<SearchAreaProps> = (props) => {
   const [searchResults, setSearchResults] = react.useState<OnlyMarketData[]>([]);
   const searchAreaContextData: SearchAreaContextData = react.useContext<SearchAreaContextData | null>(searchAreaContext) as SearchAreaContextData;
 
+
+  useEffect(() => updateSearchResults(), []);
+
   function render(): JSX.Element {
     const a: any = typeof window == "undefined";
 
@@ -26,11 +29,7 @@ const SearchArea: React.FC<SearchAreaProps> = (props) => {
         onKeyDown={(e) => e.key}
         className={classNames(props.className, styles.search_area)} 
         style={{...props.style, display: (searchAreaContextData.isOpen) ? "flex" : "none"}}
-      >
-        <div className={classNames("icon_button", styles.close_button)} onClick={(e) => searchAreaContextData.setIsOpen(false)}>
-          <Close />
-        </div>
-
+      >      
         <div className={styles.search_input_container}>
           <Search fontSize="large" />
 
@@ -60,6 +59,10 @@ const SearchArea: React.FC<SearchAreaProps> = (props) => {
               );
             }
           )}
+        </div>
+
+        <div className={classNames("icon_button", styles.close_button)} onClick={(e) => searchAreaContextData.setIsOpen(false)}>
+          <Close />
         </div>
       </div>
     );
